@@ -1,0 +1,413 @@
+<Drs_BaseConstructor_BarsAndBlocks>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~BASE CONSTRUCTOR SERIES 1~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Wood Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Iron Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Steel Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Wood Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Vanilla Wood Bars changes -->
+	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@name='Texture']/@value">379</set>
+	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">scrapIronBarsCentered</set>
+	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@class='UpgradeBlock']/property[@name='Item']/@value">resourceScrapIron</set>
+	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">40</set>
+	<set xpath="/blocks/block[@name='woodBars']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">scrapIronBars</set>
+
+<append xpath="/blocks">
+
+	<!-- WoodDowelBars -->	
+	<block name="WoodDowelBarsCentered">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Mwood" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="woodDowelBarsCentered" />
+			<property class="RepairItems"> <property name="resourceWood" value="10"/> </property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WoodDowelBarsCentered01"/>
+				<property name="Item" value="resourceWood"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+	</block>	
+	<block name="WoodDowelBars">
+			<property name="Extends" value="WoodDowelBarsCentered"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="woodDowelBars" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WoodDowelBars01"/>
+				<property name="Item" value="resourceWood"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+	</block>
+
+	<!-- WoodDowelBars01 -->			
+	<block name="WoodDowelBarsCentered01">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Mwood" />
+			<property name="MaxDamage" value="300"/>
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="woodDowelBarsCentered" />
+			<property class="RepairItems"> <property name="resourceWood" value="10"/> </property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBarsCentered"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WoodDowelBarsCentered"/>
+	</block>	
+	<block name="WoodDowelBars01">
+			<property name="Extends" value="WoodDowelBarsCentered01"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="woodDowelBars" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBars"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WoodDowelBars"/>
+	</block>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Iron Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Scrap Iron Bars -->
+	<block name="scrapIronBarsCentered">
+			<property name="CustomIcon" value="ironBars"/>
+			<property name="CustomIconTint" value="373D40" />
+			<property name="DisplayType" value="blockHardened" />
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="1000"/>
+			<property name="Shape" value="New"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="Model" value="iron_bars_centered"/>
+			<property name="Texture" value="352"/><!-- scrap iron log spike 2.352 and 380 (woodlogspike) -->
+			<property name="UseGlobalUV" value="Local"/>
+			<property name="ImposterExcludeAndStop" value="true"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property class="RepairItems"> <property name="resourceForgedIron" value="10"/> </property>
+			<drop event="Harvest" name="resourceScrapIron" count="32" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Group" value="Building"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="ironBarsDesc"/>
+			<property name="FilterTags" value="fdecor,fother,fwindows,fdoors"/>
+			<property name="SortOrder1" value="7060"/>
+			<property name="SortOrder2" value="0061"/> <!-- SortDoors -->
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="IronBars01Centered"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="woodBarsCentered"/>
+	</block>
+	<block name="scrapIronBars">
+			<property name="Extends" value="scrapIronBarsCentered"/>
+			<property name="Model" value="iron_bars"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder2" value="0060"/> <!-- SortDoors -->
+			<property class="UpgradeBlock"> 
+				<property name="ToBlock" value="IronBars01"/> </property>
+			<property name="DowngradeBlock" value="woodBars"/>
+	</block>
+	<block name="IronBars01Centered">
+			<property name="CustomIcon" value="ironBars"/>
+			<property name="DisplayType" value="blockHardened" />
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="2500"/>
+			<property name="Shape" value="New"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="Model" value="iron_bars_centered"/>
+			<property name="Texture" value="352"/><!-- scrap iron log spike 2.352 and 380 (woodlogspike) -->
+			<property name="UseGlobalUV" value="Local"/>
+			<property name="ImposterExcludeAndStop" value="true"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property class="RepairItems"> <property name="resourceForgedIron" value="10"/> </property>
+			<drop event="Harvest" name="resourceScrapIron" count="32" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Group" value="Building"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="ironBarsDesc"/>
+			<property name="FilterTags" value="fdecor,fother,fwindows,fdoors"/>
+			<property name="SortOrder1" value="7060"/>
+			<property name="SortOrder2" value="0061"/> <!-- SortDoors -->
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelBars"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="woodBarsCentered"/>
+	</block>
+	<block name="IronBars01">
+			<property name="Extends" value="IronBars01Centered"/>
+			<property name="Model" value="iron_bars"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder2" value="0060"/> <!-- SortDoors -->
+			<property class="UpgradeBlock"> <property name="ToBlock" value="steelBars"/> </property>
+			<property name="DowngradeBlock" value="woodBars"/>
+	</block>
+	<!-- Wrought Iron Bars -->	
+	<block name="WroughtIronBarsCentered">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Miron" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="wroughtIronBarsCentered" />
+			<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
+			<property name="MaxDamage" value="2500"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBarsCentered01"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+	</block>	
+	<block name="WroughtIronBars">
+			<property name="Extends" value="WroughtIronBarsCentered"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="wroughtIronBars" />
+			<property name="MaxDamage" value="2500"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBars01"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+	</block>
+	<!-- Wrought Iron Bars Upgrade -->	
+	<block name="WroughtIronBarsCentered01">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Miron" />
+			<property name="MaxDamage" value="5000"/>
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="wroughtIronBarsCentered" />
+			<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelLootBarsCentered"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WroughtIronBarsCentered"/>
+	</block>	
+	<block name="WroughtIronBars01">
+			<property name="Extends" value="WroughtIronBarsCentered01"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="wroughtIronBars" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelLootBars"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WroughtIronBars"/>
+	</block>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Steel Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- Steel Bars	-->
+	<block name="steelBarsCentered">
+			<property name="CustomIcon" value="ironBars"/>
+			<property name="CustomIconTint" value="799399" />
+			<property name="DisplayType" value="blockHardened" />
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="6000"/>
+			<property name="Shape" value="New"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="Model" value="iron_bars_centered"/>
+			<property name="Texture" value="356"/><!-- Steel block 356-->
+			<property name="UseGlobalUV" value="Local"/>
+			<property name="ImposterExcludeAndStop" value="true"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property class="RepairItems"> 
+				<property name="resourceForgedSteel" value="10"/>
+			</property>
+			<property name="DowngradeBlock" value="scrapIronBarsCentered"/>
+			<drop event="Harvest" name="resourceScrapIron" count="64" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="1" stick_chance="1"/>
+			<property name="Group" value="Building"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="ironBarsDesc"/>
+			<property name="FilterTags" value="fdecor,fother,fwindows,fdoors"/>
+			<property name="SortOrder1" value="7060"/>
+			<property name="SortOrder2" value="0061"/> <!-- SortDoors -->
+	</block>
+	<block name="steelBars">
+			<property name="Extends" value="steelBarsCentered"/>
+			<property name="Model" value="iron_bars"/>
+			<property name="DowngradeBlock" value="scrapIronBars"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder2" value="0060"/> <!-- SortDoors -->
+	</block>
+	<!-- Steel Loot Bars -->
+	<block name="steelLootBarsCentered">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Msteel" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="steelBarsCentered" />
+			<property name="MaxDamage" value="6000"/>
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="10"/> </property>
+			<property name="DowngradeBlock" value="WroughtIronBarsCentered01"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelLootBarsCentered01"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+	</block>	
+	<block name="steelLootBars">
+			<property name="Extends" value="steelLootBarsCentered"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="steelBars" />
+			<property name="DowngradeBlock" value="WroughtIronBars01"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelLootBars01"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+	</block>
+	<!-- Steel Loot Bars Upgrade -->
+	<block name="steelLootBarsCentered01">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Msteel" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="steelBarsCentered" />
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="10"/> </property>
+			<property name="MaxDamage" value="8000"/>
+			<property name="DowngradeBlock" value="steelLootBarsCentered"/>
+	</block>
+	<block name="steelLootBars01">
+			<property name="Extends" value="steelLootBarsCentered01"/>
+			<property name="Material" value="Msteel" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBars_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="steelBars" />
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="10"/> </property>		
+			<property name="DowngradeBlock" value="steelLootBars"/>
+	</block>
+
+</append>
+<!--
+<append xpath="/blocks/block[@name='ironBarsCentered']">
+		<property class="UpgradeBlock">
+		<property name="ToBlock" value="steelBarsCentered"/>
+		<property name="Item" value="resourceForgedSteel"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="4"/>
+		</property>
+		<property name="DowngradeBlock" value="woodBarsCentered"/>
+</append>
+<append xpath="/blocks/block[@name='ironBars']">
+	<property class="UpgradeBlock"> <property name="ToBlock" value="steelBars"/> </property>
+	<property name="DowngradeBlock" value="woodBars"/>
+</append>
+-->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~Stainless Block~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<append xpath="/blocks/block[@name='steelBlock']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="stainlessSteelBlock"/>
+			<property name="Item" value="resourceForgedSteel"/>
+			<property name="ItemCount" value="15"/>
+			<property name="UpgradeHitCount" value="4"/>
+		</property>
+		<property name="DowngradeBlock" value="woodBarsCentered"/>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~Barbwire Upgrade~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- <remove xpath="blocks/block/[@name='barbedWireSheet']"/> -->
+<append xpath="/blocks/block[@name='barbedWireSheet']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="barbedWireSheet01"/>
+			<property name="Item" value="resourceScrapIron"/>
+			<property name="ItemCount" value="15"/>
+			<property name="UpgradeHitCount" value="4"/>
+		</property>	
+</append>
+<append xpath="/blocks">
+
+	<block name="barbedWireSheet01">
+		<property name="Class" value="Damage"/>
+		<property name="Damage" value="1"/>
+		<property name="DamageType" value="BarbedWire"/>
+		<property name="Damage_received" value="6"/>
+		<property name="MaxDamage" value="500"/>
+		<property name="Material" value="MbarbedWire"/>
+		<property name="Shape" value="New"/>
+		<property name="Mesh" value="cutout"/>
+		<property name="LightOpacity" value="0"/>
+		<property name="Model" value="billboard"/>
+		<property name="Place" value="TowardsPlacerInverted"/>
+		<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+		<property name="Texture" value="68"/>
+		<property name="ImposterExclude" value="true"/>
+		<property name="ShapeMinBB" value="0.3,0,0.3"/>
+		<property name="Group" value="Tools/Traps,Science"/>
+		<property name="DowngradeBlock" value="barbedWireSheet"/>
+		<!--<property name="BuffsWhenWalkedOn" value="trapDamage1Trigger"/>-->
+		<property class="RepairItems"> <property name="resourceScrapIron" value="15"/> </property>
+		<drop event="Destroy" name="resourceScrapIron" count="1,12" prob="1"/>
+		<property name="EconomicValue" value="15"/>
+		<property name="FilterTags" value="fdecor,ftraps"/>
+		<property name="SortOrder1" value="70g0"/>
+	</block>
+</append>
+
+
+	
+</Drs_BaseConstructor_BarsAndBlocks>

@@ -1,0 +1,13 @@
+<Drs_BaseConstructor>
+	
+	<!--<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='1,5']/@tags"></append>-->
+	<!--<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='2,5']/@tags"></append>-->
+	
+<!-- Quad From manux_CustomVehicles_A17_modlet -->
+	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='3,5']/@tags">manux_vehicleQuadPlaceable</append>
+	<!--
+	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='4,5']/@tags"></append>
+	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='5']/@tags"></append>
+	-->
+ 
+ </Drs_BaseConstructor>

@@ -1,0 +1,227 @@
+<Drs_BaseConstructor>
+<append xpath="/recipes">
+	<recipe name="q_BaseConstructor1" count="1">
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT5_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT6_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT5_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT6_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT5_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT6_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT5_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT6_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT5_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT6_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_FlagstoneBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_FlagstoneBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_FlagstoneBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_FlagstoneBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_rebarFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_rebarFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_rebarFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_rebarFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_ironFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_ironFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_ironFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_ironFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_wetConcreteBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_wetConcreteBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_wetConcreteBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_wetConcreteBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+</append>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~BARS AND OTHER BLOCKS~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- The original ironBars essentially become the master's for this file -->
+<remove xpath="/recipes/recipe[@name='ironBars']"/>
+<remove xpath="/recipes/recipe[@name='ironBarsCentered']"/>
+
+<append xpath="/recipes">
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Wood Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<recipe name="WoodDowelBars" count="1" >
+			<ingredient name="resourceWood" count="10"/>
+	</recipe>
+	<recipe name="WoodDowelBarsCentered" count="1" >
+			<ingredient name="resourceWood" count="10"/>
+	</recipe>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Iron Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<recipe name="IronBars01Centered" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true">
+		<ingredient name="unit_iron" count="70"/>
+		<ingredient name="unit_clay" count="20"/>
+	</recipe>
+	<recipe name="IronBars01" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true">
+		<ingredient name="unit_iron" count="70"/>
+		<ingredient name="unit_clay" count="20"/>
+	</recipe>
+	<recipe name="scrapIronBarsCentered" count="1"> 
+			<ingredient name="resourceScrapIron" count="40"/>
+	</recipe>
+	<recipe name="scrapIronBars" count="1"> 
+			<ingredient name="resourceScrapIron" count="40"/>
+	</recipe>
+	<recipe name="WroughtIronBars" count="1" craft_area="forge" material_based="true">
+			<ingredient name="unit_iron" count="50" />
+			<ingredient name="unit_clay" count="15" />
+	</recipe>
+	<recipe name="WroughtIronBarsCentered" count="1" craft_area="forge" material_based="true">
+			<ingredient name="unit_iron" count="50" />
+			<ingredient name="unit_clay" count="15" />
+	</recipe>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Steel Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<recipe name="steelLootBars" count="1" craft_area="forge" craft_tool="toolForgeCrucible" material_based="true">
+			<ingredient name="unit_iron" count="100" />
+			<ingredient name="unit_clay" count="20" />
+			<ingredient name="unit_lead" count="20" />
+	</recipe>
+	<recipe name="steelLootBarsCentered" count="1" craft_area="forge" craft_tool="toolForgeCrucible" material_based="true">
+			<ingredient name="unit_iron" count="100" />
+			<ingredient name="unit_clay" count="20" />
+			<ingredient name="unit_lead" count="20" />
+	</recipe>	
+	
+	<recipe name="steelBarsCentered" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true">
+			<ingredient name="unit_iron" count="80"/>
+			<ingredient name="unit_clay" count="15"/>
+			<ingredient name="unit_lead" count="15" />
+	</recipe>
+	<recipe name="steelBars" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true"> 
+			<ingredient name="unit_iron" count="80"/>
+			<ingredient name="unit_clay" count="15"/>
+			<ingredient name="unit_lead" count="15" />
+	</recipe>
+	
+	
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Manux Quad~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<recipe name="manux_vehicleQuadPlaceable" count="1" craft_area="workbench" craft_time="300">
+			<ingredient name="vehicleWheels" count="4"/>
+			<ingredient name="vehicleMotorcycleChassis" count="1"/>
+			<ingredient name="vehicleMotorcycleHandlebars" count="1"/>
+			<ingredient name="smallEngine" count="2"/>
+			<ingredient name="carBattery" count="1"/>
+	</recipe>
+
+
+</append>
+</Drs_BaseConstructor>

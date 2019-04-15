@@ -1,0 +1,41 @@
+<Drs_BaseConstructor>
+<append xpath="/lootcontainers" >
+
+<lootgroup name="questSkillBook">
+	<item name="SkillBook_Advanced_Engineering" count="1" />
+	<item name="SkillBook_Better_Barter" count="1" />
+	<item name="SkillBook_Daring_Adventurer" count="1" />
+	<item name="SkillBook_Grease_Monkey" count="1" />
+	<item name="SkillBook_Hammer_Forge" count="1" />
+	<item name="SkillBook_Loving_Off_The_Land" count="1" />
+	<item name="SkillBook_Lucky_Looter" count="1" />
+	<item name="SkillBook_Master_Chef" count="1" />
+	<item name="SkillBook_Miner_69r" count="1" />
+	<item name="SkillBook_Mother_Lode" count="1" />
+	<item name="SkillBook_Pack_Mule" count="1" />
+	<item name="SkillBook_Physician" count="1" />
+	<item name="SkillBook_Salvage_Operation" count="1" />
+	<item name="SkillBook_Sexual_Trex" count="1" />
+	<item name="SkillBook_Yeah_Science" count="1" />
+</lootgroup>
+
+</append>
+</Drs_BaseConstructor>
+
+<!--
+SkillBook_Advanced_Engineering
+SkillBook_Better_Barter
+SkillBook_Daring_Adventurer
+SkillBook_Grease_Monkey
+SkillBook_Hammer_Forge
+SkillBook_Loving_Off_The_Land
+SkillBook_Lucky_Looter
+SkillBook_Master_Chef
+SkillBook_Miner_69r
+SkillBook_Mother_Lode
+SkillBook_Pack_Mule
+SkillBook_Physician
+SkillBook_Salvage_Operation
+SkillBook_Sexual_Trex
+SkillBook_Yeah_Science
+-->
