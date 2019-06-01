@@ -129,16 +129,16 @@
 	<recipe name="MT4_ironFrameBlock" count="1" tags="learnable" >
 		<ingredient name="resourcePaper" count="1"/>
 	</recipe>
-	<recipe name="MT1_wetConcreteBlock" count="1" tags="learnable" >
+	<recipe name="MT1_pouredConcreteBlock" count="1" tags="learnable" >
 		<ingredient name="resourcePaper" count="1"/>
 	</recipe>
-	<recipe name="MT2_wetConcreteBlock" count="1" tags="learnable" >
+	<recipe name="MT2_pouredConcreteBlock" count="1" tags="learnable" >
 		<ingredient name="resourcePaper" count="1"/>
 	</recipe>
-	<recipe name="MT3_wetConcreteBlock" count="1" tags="learnable" >
+	<recipe name="MT3_pouredConcreteBlock" count="1" tags="learnable" >
 		<ingredient name="resourcePaper" count="1"/>
 	</recipe>
-	<recipe name="MT4_wetConcreteBlock" count="1" tags="learnable" >
+	<recipe name="MT4_pouredConcreteBlock" count="1" tags="learnable" >
 		<ingredient name="resourcePaper" count="1"/>
 	</recipe>
 </append>

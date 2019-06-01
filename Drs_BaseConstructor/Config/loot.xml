@@ -1,6 +1,29 @@
 <Drs_BaseConstructor>
+<!--	Loot Group Index
+questSkillBook
+questConstructionBlocks
+questConstructionMaterials
+questConstructionExtras
+questBaseDefense
+-->
 <append xpath="/lootcontainers" >
-
+<!--	questSkillBook
+SkillBook_Advanced_Engineering
+SkillBook_Better_Barter
+SkillBook_Daring_Adventurer
+SkillBook_Grease_Monkey
+SkillBook_Hammer_Forge
+SkillBook_Loving_Off_The_Land
+SkillBook_Lucky_Looter
+SkillBook_Master_Chef
+SkillBook_Miner_69r
+SkillBook_Mother_Lode
+SkillBook_Pack_Mule
+SkillBook_Physician
+SkillBook_Salvage_Operation
+SkillBook_Sexual_Trex
+SkillBook_Yeah_Science
+-->
 <lootgroup name="questSkillBook">
 	<item name="SkillBook_Advanced_Engineering" count="1" />
 	<item name="SkillBook_Better_Barter" count="1" />
@@ -18,24 +41,133 @@
 	<item name="SkillBook_Sexual_Trex" count="1" />
 	<item name="SkillBook_Yeah_Science" count="1" />
 </lootgroup>
+<!--	questConstructionBlocks
+GradeALoot
+	rebarFrameBlock
+	woodFrameBlock
+	flagstoneBlock
+	WoodDowelBarsCentered
+	WoodDowelBars
+GradeBLoot
+	scrapIronFrameBlock	
+	scrapIronSheet
+	cobblestoneBlock
+	pouredConcreteBlock
+	WroughtIronBarsCentered
+	WroughtIronBars		
+GradeCLoot
+	metalTrussingBlock
+	steelLootBarsCentered
+	steelLootBars
+	steelBlock
+-->
+<lootgroup name="questConstructionBlocks">
+	<item name="woodFrameBlock" count="150,300" prob="0.5" />
+	<item name="rebarFrameBlock" count="150,300" loot_prob_template="GradeALoot"/>
+	<item name="flagstoneBlock" count="150,300" loot_prob_template="GradeALoot"/>
+	<item name="WoodDowelBars" count="25,50"  loot_prob_template="GradeALoot"/>
+	<item name="WoodDowelBarsCentered" count="25,50"  loot_prob_template="GradeALoot"/>
+	
+	<item name="scrapIronFrameBlock" count="150,300" loot_prob_template="GradeBLoot"/>
+	<item name="scrapIronSheet" count="150,300" loot_prob_template="GradeBLoot"/>
+	<item name="cobblestoneBlock" count="150,300" loot_prob_template="GradeBLoot"/>
+	<item name="pouredConcreteBlock" count="150,300" loot_prob_template="GradeBLoot"/>
+	<item name="WroughtIronBarsCentered" count="25,50" loot_prob_template="GradeBLoot"/>
+	<item name="WroughtIronBars" count="25,50" loot_prob_template="GradeBLoot"/>
+	
+	<item name="metalTrussingBlock" count="25,50" loot_prob_template="GradeCLoot"/>
+	<item name="steelLootBarsCentered" count="25,50" loot_prob_template="GradeCLoot"/>
+	<item name="steelLootBars" count="25,50" loot_prob_template="GradeCLoot"/>
+	<item name="steelBlock" count="150,300" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+<!--	questConstructionMaterials
+resourceScrapIron
+resourceWood
+resourceElectricParts
+resourceCobblestones
+resourceCrushedSand
+resourceCement
+resourceForgedIron
+resourceConcreteMix
+resourceForgedSteel
+-->
+<lootgroup name="questConstructionMaterials">
+	<item name="resourceScrapIron" count="150,300" prob="1.0"/>
+	<item name="resourceWood" count="500,800" prob="1.0"/>
+	<item name="resourceElectricParts" count="50,100" prob="1.0"/>
+	<item name="resourceCobblestones" count="150,300" prob="1.0"/>
+	<item name="resourceCrushedSand" count="500,800" prob="1.0"/>
+	<item name="resourceCement" count="500,800" prob="1.0"/>
+	<item name="resourceForgedIron" count="150,300" loot_prob_template="GradeBLoot"/>
+	<item name="resourceConcreteMix" count="500,800" loot_prob_template="GradeBLoot"/>
+	<item name="resourceForgedSteel" count="150,300" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+<!--	questConstructionExtras
+electricwirerelay
+cntSecureStorageChest
+ceilingLight01_player
+ladderWood
+ironDoor1_v1
+motionsensor
+generatorbank
+batterybank
+cntFridgeStainlessSteel
+garageDoorHouse
+vaultHatch_v1
+vaultDoor01
+crushedCars
+solarCell
+-->
+<lootgroup name="questConstructionExtras">
+	<item name="electricwirerelay" count="5,10" prob="0.5"/>
+	<item name="cntSecureStorageChest" count="1,10" loot_prob_template="GradeALoot"/>
+	<item name="ceilingLight01_player" count="5,10" loot_prob_template="GradeALoot"/>	
+	<item name="ladderWood" count="15,30" loot_prob_template="GradeALoot"/>
+	<item name="ironDoor1_v1" count="2,10" loot_prob_template="GradeBLoot"/>
+	<item name="motionsensor" count="1,5" loot_prob_template="GradeBLoot"/>
+	<item name="generatorbank" count="1,5" loot_prob_template="GradeBLoot"/>
+	<item name="batterybank" count="1,5" loot_prob_template="GradeBLoot"/>	
+	<item name="cntFridgeStainlessSteel" count="1,5" loot_prob_template="GradeBLoot"/>
+	<item name="garageDoorHouse" count="1,5" loot_prob_template="GradeBLoot"/>
+	<item name="vaultHatch_v1" count="2,10" loot_prob_template="GradeCLoot"/>
+	<item name="vaultDoor01" count="2,10" loot_prob_template="GradeCLoot"/>
+	<item name="crushedCars" count="15,30" loot_prob_template="GradeCLoot"/>
+	<item name="solarCell" count="1,5" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+<!--	questBaseDefense
+barbedWireSheet
+trapSpikesWoodDmg0
+pressureplate
+autoTurret
+motionsensor
+electricfencepost
+dartTrap
+woodLogSpike1
+bladeTrap
+trapSpikesIronDmg0
+steelLogSpike6
+-->
+<lootgroup name="questBaseDefense">
+	<item name="barbedWireSheet" count="15,30" loot_prob_template="GradeALoot"/>
+	<item name="trapSpikesWoodDmg0" count="15,30" loot_prob_template="GradeALoot"/>
+	<item name="pressureplate" count="15,30" loot_prob_template="GradeALoot"/>
+	<item name="autoTurret" count="1,5" loot_prob_template="GradeALoot"/>
+	<item name="motionsensor" count="1,5" loot_prob_template="GradeBLoot"/>
+	<item name="electricfencepost" count="2,6" loot_prob_template="GradeBLoot"/>
+	<item name="dartTrap" count="1,5" loot_prob_template="GradeBLoot"/>
+	<item name="woodLogSpike1" count="15,30" loot_prob_template="GradeBLoot"/>
+	<item name="bladeTrap" count="1,5" loot_prob_template="GradeCLoot"/>
+	<item name="trapSpikesIronDmg0" count="15,30" loot_prob_template="GradeCLoot"/>
+	<item name="steelLogSpike6" count="10,25" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+
+<lootgroup name="questConstruction">
+	<item group="questConstructionBlocks" count="1"/>
+	<item group="questConstructionMaterials" count="1"/>
+	<item group="questConstructionExtras" count="1"/>
+	<item group="questBaseDefense" count="1"/>
+</lootgroup>
 
 </append>
 </Drs_BaseConstructor>
 
-<!--
-SkillBook_Advanced_Engineering
-SkillBook_Better_Barter
-SkillBook_Daring_Adventurer
-SkillBook_Grease_Monkey
-SkillBook_Hammer_Forge
-SkillBook_Loving_Off_The_Land
-SkillBook_Lucky_Looter
-SkillBook_Master_Chef
-SkillBook_Miner_69r
-SkillBook_Mother_Lode
-SkillBook_Pack_Mule
-SkillBook_Physician
-SkillBook_Salvage_Operation
-SkillBook_Sexual_Trex
-SkillBook_Yeah_Science
--->

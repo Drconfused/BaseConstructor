@@ -2,9 +2,18 @@
 <append xpath="/items" >
 	<item name="q_BaseConstructor1">
 		<property name="Extends" value="questMaster" />
-		<property name="Description" value="Base Constructor 1" />
+		<property name="DescriptionKey" value="q_BaseConstructor1Desc" />
+		<property name="CustomIcon" value="Drs_Construction_WorkOrder"/>
 		<property class="Action0">
 			<property name="QuestGiven" value="BaseConstructor1" />
+		</property>
+	</item>
+	<item name="q_Second_Base_1">
+		<property name="Extends" value="questMaster" />
+		<property name="DescriptionKey" value="q_Second_Base_1Desc" />
+		<property name="CustomIcon" value="Drs_Construction_WorkOrder"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Second_Base_1" />
 		</property>
 	</item>
 	<item name="MT1_Cobblestone">
@@ -385,40 +394,40 @@
 			<property name="QuestGiven" value="quest_MaterialTrader4_ironFrameBlock" />
 		</property>
 	</item>
-	<item name="MT1_wetConcreteBlock">
+	<item name="MT1_pouredConcreteBlock">
 		<property name="Extends" value="questMaster" />
 		<property name="CreativeMode" value="Player"/>
-		<property name="Description" value="MT1_wetConcreteBlockDesc" />
-		<property name="CustomIcon" value="MT_wetConcreteBlock25"/>
+		<property name="Description" value="MT1_pouredConcreteBlockDesc" />
+		<property name="CustomIcon" value="MT_pouredConcreteBlock25"/>
 		<property class="Action0">
-			<property name="QuestGiven" value="quest_MaterialTrader1_wetConcreteBlock" />
+			<property name="QuestGiven" value="quest_MaterialTrader1_pouredConcreteBlock" />
 		</property>
 	</item>
-	<item name="MT2_wetConcreteBlock">
+	<item name="MT2_pouredConcreteBlock">
 		<property name="Extends" value="questMaster" />
 		<property name="CreativeMode" value="Player"/>
-		<property name="Description" value="MT2_wetConcreteBlockDesc" />
-		<property name="CustomIcon" value="MT_wetConcreteBlock100"/>
+		<property name="Description" value="MT2_pouredConcreteBlockDesc" />
+		<property name="CustomIcon" value="MT_pouredConcreteBlock100"/>
 		<property class="Action0">
-			<property name="QuestGiven" value="quest_MaterialTrader2_wetConcreteBlock" />
+			<property name="QuestGiven" value="quest_MaterialTrader2_pouredConcreteBlock" />
 		</property>
 	</item>
-	<item name="MT3_wetConcreteBlock">
+	<item name="MT3_pouredConcreteBlock">
 		<property name="Extends" value="questMaster" />
 		<property name="CreativeMode" value="Player"/>
-		<property name="Description" value="MT3_wetConcreteBlockDesc" />
-		<property name="CustomIcon" value="MT_wetConcreteBlock500"/>
+		<property name="Description" value="MT3_pouredConcreteBlockDesc" />
+		<property name="CustomIcon" value="MT_pouredConcreteBlock500"/>
 		<property class="Action0">
-			<property name="QuestGiven" value="quest_MaterialTrader3_wetConcreteBlock" />
+			<property name="QuestGiven" value="quest_MaterialTrader3_pouredConcreteBlock" />
 		</property>
 	</item>
-	<item name="MT4_wetConcreteBlock">
+	<item name="MT4_pouredConcreteBlock">
 		<property name="Extends" value="questMaster" />
 		<property name="CreativeMode" value="Player"/>
-		<property name="Description" value="MT4_wetConcreteBlockDesc" />
-		<property name="CustomIcon" value="MT_wetConcreteBlock1000"/>
+		<property name="Description" value="MT4_pouredConcreteBlockDesc" />
+		<property name="CustomIcon" value="MT_pouredConcreteBlock1000"/>
 		<property class="Action0">
-			<property name="QuestGiven" value="quest_MaterialTrader4_wetConcreteBlock" />
+			<property name="QuestGiven" value="quest_MaterialTrader4_pouredConcreteBlock" />
 		</property>
 	</item>
 	<item name="WorkOrderQuestSchematic1">
@@ -436,7 +445,7 @@
 			<requirement name="CVarCompare" cvar="MT1_FlagstoneBlock" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="MT1_rebarFrameBlock" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="MT1_ironFrameBlock" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="MT1_wetConcreteBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT1_pouredConcreteBlock" operation="Equals" value="0"/>
 		</property>
 		<effect_group tiered="false">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_Cobblestone" operation="set" value="1"/>
@@ -447,7 +456,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_FlagstoneBlock" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_rebarFrameBlock" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_ironFrameBlock" operation="set" value="1"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_wetConcreteBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_pouredConcreteBlock" operation="set" value="1"/>
 		</effect_group>
 	</item>
 	<item name="WorkOrderQuestSchematic2">
@@ -465,7 +474,7 @@
 			<requirement name="CVarCompare" cvar="MT2_FlagstoneBlock" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="MT2_rebarFrameBlock" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="MT2_ironFrameBlock" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="MT2_wetConcreteBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT2_pouredConcreteBlock" operation="Equals" value="0"/>
 		</property>
 		<effect_group tiered="false">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_Cobblestone" operation="set" value="1"/>
@@ -476,7 +485,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_FlagstoneBlock" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_rebarFrameBlock" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_ironFrameBlock" operation="set" value="1"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_wetConcreteBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_pouredConcreteBlock" operation="set" value="1"/>
 		</effect_group>
 	</item>	
 	<item name="WorkOrderQuestSchematic3">
@@ -494,7 +503,7 @@
 			<requirement name="CVarCompare" cvar="MT3_FlagstoneBlock" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="MT3_rebarFrameBlock" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="MT3_ironFrameBlock" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="MT3_wetConcreteBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT3_pouredConcreteBlock" operation="Equals" value="0"/>
 		</property>
 		<effect_group tiered="false">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_Cobblestone" operation="set" value="1"/>
@@ -505,7 +514,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_FlagstoneBlock" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_rebarFrameBlock" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_ironFrameBlock" operation="set" value="1"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_wetConcreteBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_pouredConcreteBlock" operation="set" value="1"/>
 		</effect_group>
 	</item>	
 	<item name="WorkOrderQuestSchematic4">
@@ -523,7 +532,7 @@
 			<requirement name="CVarCompare" cvar="MT4_FlagstoneBlock" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="MT4_rebarFrameBlock" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="MT4_ironFrameBlock" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="MT4_wetConcreteBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT4_pouredConcreteBlock" operation="Equals" value="0"/>
 		</property>
 		<effect_group tiered="false">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_Cobblestone" operation="set" value="1"/>
@@ -534,7 +543,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_FlagstoneBlock" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_rebarFrameBlock" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_ironFrameBlock" operation="set" value="1"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_wetConcreteBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_pouredConcreteBlock" operation="set" value="1"/>
 		</effect_group>
 	</item>
 	<item name="WorkOrderQuestSchematic5">

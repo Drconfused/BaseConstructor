@@ -1,0 +1,10 @@
+--Drs_BaseConstructor--
+q_Second_Base_1,item,Items,New,Construction Outpost WorkOrder,,,,,
+q_Second_Base_1Desc,item,Items,New,"We need to develop working outposts in the area to withstand this onslaught of zombies, get to the marked location on the map and get that outpost built and defend it when done.",,,,,
+q_BaseConstructor1,item,Items,New,Construction Outpost WorkOrder,,,,,
+q_BaseConstructor1Desc,item,Items,New,"You need to get a homebase in the region, start this process and you will be rewarded for your efforts, it will allow me to do what I do best and that is trade, skilled workers are lacking these days.",,,,,
+
+
+
+
+

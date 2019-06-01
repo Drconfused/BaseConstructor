@@ -1,8 +1,7 @@
 <Drs_BaseConstructor>
 <remove xpath="/quests/quest[@id='quest_whiteRiverCitizen1']"/>
-
-
 <remove xpath="/quests/quest[@id='quest_BasicSurvival1']"/>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival2']"/>
 <append xpath="/quests">
 <!--
 
@@ -39,8 +38,25 @@
 		<reward type="Item" id="q_BaseConstructor1" value="1" />
 	</quest>
 -->
-
 	<quest id="quest_BasicSurvival1">
+			<property name="group_name_key" value="quest_BasicSurvival" />
+			<property name="name" value="Getting started" />
+			<property name="subtitle" value="Lets get this part out of the way." />
+			<property name="description" value="To many things to do, need to find a trader so lets get on that right away!" />
+			<property name="icon" value="ui_game_symbol_map_trader" />
+			<property name="category_key" value="quest" />
+			<property name="difficulty" value="medium" />
+			<property name="shareable" value="false" />
+			
+			<reward type="Item" id="vehicleBicyclePlaceable" value="1" />
+			<reward type="Item" id="bedroll" value="1" />
+			<reward type="Item" id="flannelShirtRed" value="1" />
+			<reward type="Item" id="wornBoots" value="1" />
+			<reward type="Item" id="armorLeatherGloves" value="1" />
+			<reward type="Quest" id="quest_BasicSurvival2" />
+			<reward type="Quest" id="Milestone_Zombie_Kill_100" />
+	</quest>
+	<quest id="quest_BasicSurvival2">
 			<property name="group_name_key" value="quest_WhiteRiverCitizen" />
 			<property name="name_key" value="quest_WhiteRiverCitizen1" />
 			<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitle" />
@@ -59,16 +75,14 @@
 			<reward type="Exp" value="1000" />
 			<reward type="SkillPoints" value="5" chainreward="true" />
 			
-			<reward type="Item" id="bedroll" value="1" />
+			
 			<reward type="Item" id="Impact Wrench" value="1" />
 			<reward type="Item" id="meleeToolAuger" value="1" />
 			<reward type="Item" id="meleeToolChainsaw" value="1" />
 			<reward type="Item" id="ammoGasCan" value="1000" />
 			<reward type="Item" id="overalls" value="1" />
-			<reward type="Item" id="flannelShirtRed" value="1" />
 			<reward type="Item" id="armorMiningHelmet" value="1" />
-			<reward type="Item" id="wornBoots" value="1" />
-			<reward type="Item" id="armorLeatherGloves" value="1" />
+
 			<reward type="Item" id="q_BaseConstructor1" value="1" />
 			<reward type="LootItem" id="questSkillBook" value="1" />
 	</quest>
@@ -81,22 +95,22 @@
 		<property name="icon" value="ui_game_symbol_map_fortress" />
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/> 
-		<property name="offer" value="Get a basic base built" />
+		<property name="offer" value="If you scratch my back I'll scratch yours. Get started biulding a base and help protect the region. This way I can focus on trades rather than developing the area." />
 		<property name="shareable" value="false" />
 		<property name="completiontype" value="TurnIn" />
 		<property name="completion_key" value="Well Damn! You sure can build. Lets see if you can keep that up. Here is some incentive." />
 		
 		<objective type="FetchKeep" id="woodFrameBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="8" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="8" phase="1" />
 		<objective type="FetchKeep" id="secureDoorWooden" value="2" phase="1" />
-		<objective type="BlockPlace" id="woodFrameBlock" value="50" phase="1" />
-		<objective type="BlockUpgrade" id="woodFrameBlock" value="50" phase="1" />
-		<objective type="BlockPlace" id="secureDoorWooden" value="2" phase="1" />
 		<objective type="FetchKeep" id="woodHatch1_v1" value="2" phase="1" />
 		
-		<objective type="FetchKeep" id="WoodDowelBars" value="8" phase="2" />
-		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="8" phase="2" />
+		<objective type="BlockPlace" id="woodFrameBlock" value="50" phase="2" />
+		<objective type="BlockUpgrade" id="woodFrameBlock" value="50" phase="2" />
 		<objective type="BlockPlace" id="WoodDowelBars" value="8" phase="2" />
 		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="8" phase="2" />
+		<objective type="BlockPlace" id="secureDoorWooden" value="2" phase="2" />
 		<objective type="BlockPlace" id="woodHatch1_v1" value="2" phase="2" />
 		
 		<objective type="ReturnToNPC">
@@ -109,13 +123,15 @@
 		<reward type="Exp" value="3000" />	
 		<reward type="Item" id="casinoCoin" value="300-1000" />
 		<reward type="Item" id="meleeToolClawHammer" value="1" />
-		<reward type="Item" id="modGasTank1" value="1" />
-		<reward type="Item" id="WorkOrderQuestSchematic1" value="1" />
 		<reward type="Item" id="workbench" value="1" />
-		
-		<reward type="LootItem" id="questTools" value="1" />
+		<reward type="Item" id="resourceRepairKit" value="10" />
+		<reward type="Item" id="WorkOrderQuestSchematic1" value="1" />
 		<reward type="LootItem" id="questSkillBook" value="1" />
-		
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="11" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="11" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="11" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="11" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="11" />
 		<reward type="Quest" id="BaseConstructor2" />
 	</quest>
 	<quest id="BaseConstructor2">
@@ -133,30 +149,36 @@
 		
 		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
 		<objective type="FetchKeep" id="flagstoneBlock" value="25" phase="1" />
+		<objective type="FetchKeep" id="ladderWood" value="10" phase="1" />
 		
-		<objective type="BlockPlace" id="flagstoneBlock" value="25" phase="2" />
-		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="2" />
-		<objective type="BlockPlace" id="workbench" value="1" phase="2" />
-			
 		<objective type="BlockUpgrade" id="WoodDowelBars" value="8" phase="2" />
 		<objective type="BlockUpgrade" id="WoodDowelBarsCentered" value="8" phase="2" />
 		<objective type="BlockUpgrade" id="woodBlock" value="50" phase="2" />
 		<objective type="BlockUpgrade" id="secureDoorWooden" value="2" phase="2" />
 		<objective type="BlockUpgrade" id="woodHatch1_v1" value="2" phase="2" />
 		
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="25" phase="3" />
+		<objective type="BlockPlace" id="ladderWood" value="10" phase="3" />
+		
 		<objective type="ReturnToNPC">
-			<property name="phase" value="3" />
+			<property name="phase" value="4" />
 		</objective>
 		<objective type="InteractWithNPC">
-			<property name="phase" value="3" />
+			<property name="phase" value="4" />
 		</objective>
 		
 		<reward type="Exp" value="3000" />	
-		<reward type="Item" id="casinoCoin" value="300-1000" />
+		<reward type="Item" id="casinoCoin" value="400-1000" />
 		<reward type="Item" id="modEngineTurbo1" value="1" />
 		<reward type="Item" id="ammoGasCan" value="1000" />
+		<reward type="Item" id="forge" value="1" />
 		<reward type="Item" id="WorkOrderQuestSchematic2" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="12" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="12" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="12" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="12" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="12" />
 		<reward type="LootItem" id="questSkillBook" value="1" />
 		<reward type="Quest" id="BaseConstructor3" />
 	</quest>
@@ -175,13 +197,13 @@
 		
 		<objective type="FetchKeep" id="flagstoneBlock" value="25" phase="1" />
 		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="50" phase="1" />
-		<objective type="FetchKeep" id="generatorbank" value="1" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
 		
 		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="50" phase="2" />
 		<objective type="BlockPlace" id="flagstoneBlock" value="25" phase="2" />
-		<objective type="BlockPlace" id="generatorbank" value="1" phase="2" />
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="2" />
 		
-		<objective type="BlockUpgrade" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockUpgrade" id="barbedWireSheet" value="20" phase="3" />
 		<objective type="BlockUpgrade" id="WoodDowelBars01" value="8" phase="3" />
 		<objective type="BlockUpgrade" id="WoodDowelBarsCentered01" value="8" phase="3" />
 		<objective type="BlockUpgrade" id="rWoodBlock" value="50" phase="3" />
@@ -197,16 +219,18 @@
 		</objective>
 		
 		<reward type="Exp" value="3000" />	
-		<reward type="Item" id="casinoCoin" value="300-1000" />
-		<reward type="Item" id="modMotorToolExtension2" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
-		<reward type="LootItem" id="questSkillBook" value="1" />
+		<reward type="Item" id="casinoCoin" value="500-1000" />
 		<reward type="Item" id="manux_vehicleQuadPlaceable" value="1" />
+		<reward type="LootItem" id="modMotorToolStuff" value="3" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="13" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="13" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="13" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="13" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="13" />
 		<reward type="Item" id="WorkOrderQuestSchematic3" />
+		<reward type="LootItem" id="questSkillBook" value="1" />
+		<reward type="Item" id="q_Second_Base_1" value="1" />
 		<reward type="Quest" id="BaseConstructor4" />
-		<reward type="Quest" id="Second_Base_1" />
-		
-		
 	</quest>
 	<quest id="BaseConstructor4">
 		<!-- <property name="group_name" value="BaseConstructor" /> -->
@@ -221,8 +245,9 @@
 		<property name="completiontype" value="TurnIn" />
 		<property name="completion_key" value="Well Damn! You sure can build. Lets see if you can keep that up. Here is some incentive." />
 		
+		<objective type="FetchKeep" id="burningBarrelPlayer" value="10" phase="1" />
 		
-		
+		<objective type="BlockPlace" id="burningBarrelPlayer" value="10" phase="2" />
 		<objective type="BlockUpgrade" id="WroughtIronBars" value="8" phase="2" />
 		<objective type="BlockUpgrade" id="WroughtIronBarsCentered" value="8" phase="2" />
 		<objective type="BlockUpgrade" id="rWoodMetalBlock" value="50" phase="2" />
@@ -241,8 +266,14 @@
 		<reward type="Exp" value="3000" />	
 		<reward type="Item" id="casinoCoin" value="300-1000" />
 		<reward type="Item" id="ammoGasCan" value="2500" />
+		<reward type="Item" id="Oil Extractor" value="1" />
+		<reward type="LootItem" id="modMotorToolStuff" value="4" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="14" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="14" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="14" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="14" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="14" />
 		<reward type="Item" id="WorkOrderQuestSchematic4" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
 		<reward type="LootItem" id="questSkillBook" value="1" />
 		<reward type="Quest" id="BaseConstructor5" />
 	</quest>
@@ -264,6 +295,7 @@
 		
 		<objective type="BlockPlace" id="motionsensor" value="1" phase="2" />
 		<objective type="BlockPlace" id="electricfencepost" value="4" phase="2" />
+		
 		<objective type="BlockUpgrade" id="WroughtIronBars01" value="8" phase="2" />
 		<objective type="BlockUpgrade" id="WroughtIronBarsCentered01" value="8" phase="2" />
 		<objective type="BlockUpgrade" id="scrapIronBlock" value="50" phase="2" />
@@ -281,7 +313,12 @@
 		<reward type="Exp" value="3000" />	
 		<reward type="Item" id="casinoCoin" value="300-1000" />
 		<reward type="Item" id="Quicker Fixer Upper Schematic" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
+		<reward type="LootItem" id="modMotorToolStuff" value="5" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="15" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="15" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="15" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="15" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="15" />
 		<reward type="LootItem" id="questSkillBook" value="1" />
 		<reward type="Item" id="WorkOrderQuestSchematic5" value="1" />
 		<reward type="Quest" id="BaseConstructor6" />
@@ -310,8 +347,6 @@
 		<objective type="BlockUpgrade" id="ironDoor1_v2" value="2" phase="2" />
 		<objective type="BlockUpgrade" id="scrapHatch_v2" value="2" phase="2" />
 		
-		
-		
 		<objective type="ReturnToNPC">
 			<property name="phase" value="3" />
 		</objective>
@@ -322,7 +357,13 @@
 		<reward type="Exp" value="3000" />	
 		<reward type="Item" id="casinoCoin" value="300-1000" />
 		<reward type="Item" id="ammoGasCan" value="5000" />
-		<reward type="LootItem" id="questTools" value="1" />
+		<reward type="Item" id="vehicle4x4TruckPlaceable" value="1" />
+		<reward type="LootItem" id="modMotorToolStuff" value="6" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="16" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="16" />
 		<reward type="LootItem" id="questSkillBook" value="1" />
 		<reward type="Quest" id="BaseConstructor7" />
 		
@@ -343,7 +384,7 @@
 		<objective type="FetchKeep" id="resourceWood" value="536" phase="1" />
 	
 		<objective type="BlockUpgrade" id="rConcreteBlock" value="100" phase="2" />
-		<objective type="BlockUpgrade" id="vaultDoor01" value="2" phase="2" />
+		<objective type="BlockUpgrade" id="ironDoor1_v3" value="2" phase="2" />
 		<objective type="BlockUpgrade" id="scrapHatch_v3" value="2" phase="2" />
 		
 		<objective type="ReturnToNPC">
@@ -355,7 +396,12 @@
 		
 		<reward type="Exp" value="3000" />	
 		<reward type="Item" id="casinoCoin" value="300-1000" />
-		<reward type="LootItem" id="questTools" value="1" />
+		<reward type="LootItem" id="modMotorToolStuff" value="1" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="16" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="16" />
 		<reward type="LootItem" id="questSkillBook" value="1" />
 		<reward type="Quest" id="BaseConstructor8" />
 	</quest>
@@ -374,7 +420,7 @@
 	
 
 		<objective type="BlockUpgrade" id="steelBlock" value="50" phase="2" />
-		<objective type="BlockUpgrade" id="vaultDoor02" value="2" phase="2" />
+		<objective type="BlockUpgrade" id="vaultDoor01" value="2" phase="2" />
 		<objective type="BlockUpgrade" id="vaultHatch_v1" value="2" phase="2" />
 		<reward type="Item" id="ammoGasCan" value="10000" />
 		<objective type="ReturnToNPC">
@@ -386,13 +432,614 @@
 		
 		<reward type="Exp" value="20000" />	
 		<reward type="Item" id="casinoCoin" value="3000-10000" />
+		<reward type="LootItem" id="modMotorToolStuff" value="1" />
 		<reward type="Item" id="WorkOrderQuestSchematic6" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="16" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="16" />
 		<reward type="LootItem" id="questSkillBook" value="1" />
 		<!--
 		<reward type="Quest" id="BaseConstructor7" /> series completion awesomeness
 		-->
 	</quest>	
+
+	<quest id="Second_Base_1">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="We need to expand our protected area, get some supplies and then go to the marked area and start to build a second base." />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="200-500" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="2" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="2" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="2" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="2" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="2" phase="4" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="1" phase="4" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="1" phase="4" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="1" phase="4" />
+		<objective type="ZombieKill" id="zombieScreamer" value="1" phase="4" />
+		<objective type="ZombieKill" id="zombieBurnt" value="1" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="2" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="2" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="2" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="2" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="2" phase="5" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="1" phase="5" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="1" phase="5" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="1" phase="5" />
+		<objective type="ZombieKill" id="zombieScreamer" value="1" phase="5" />
+		<objective type="ZombieKill" id="zombieBurnt" value="1" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="casinoCoin" value="300-1000" />
+		<reward type="Item" id="ammoGasCan" value="1000" />
+		<reward type="LootItem" id="questMods" value="1" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="13" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="13" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="13" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="13" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="13" />
+		<reward type="Quest" id="Second_Base_2" />
+	</quest>		
+	<quest id="Second_Base_2">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Second Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Wonderful addition, lets keep this up and get more locations ready." />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a second second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="400-700" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="4" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="4" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="4" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="4" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="4" phase="4" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="2" phase="4" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="2" phase="4" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="2" phase="4" />
+		<objective type="ZombieKill" id="zombieScreamer" value="2" phase="4" />
+		<objective type="ZombieKill" id="zombieBurnt" value="2" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="4" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="4" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="4" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="4" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="4" phase="5" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="2" phase="5" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="2" phase="5" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="2" phase="5" />
+		<objective type="ZombieKill" id="zombieScreamer" value="2" phase="5" />
+		<objective type="ZombieKill" id="zombieBurnt" value="2" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="casinoCoin" value="300-1000" />
+		<reward type="Item" id="ammoGasCan" value="1000" />
+		<reward type="LootItem" id="questMods" value="2" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="14" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="14" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="14" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="14" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="14" />
+		<reward type="Quest" id="Second_Base_3" />
+
+	</quest>		
+	<quest id="Second_Base_3">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Third Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a third second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="700-1000" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="6" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="6" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="6" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="6" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="6" phase="4" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="3" phase="4" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="3" phase="4" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="3" phase="4" />
+		<objective type="ZombieKill" id="zombieScreamer" value="3" phase="4" />
+		<objective type="ZombieKill" id="zombieBurnt" value="3" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="6" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="6" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="6" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="6" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="6" phase="5" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="3" phase="5" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="3" phase="5" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="3" phase="5" />
+		<objective type="ZombieKill" id="zombieScreamer" value="3" phase="5" />
+		<objective type="ZombieKill" id="zombieBurnt" value="3" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="casinoCoin" value="300-1000" />
+		<reward type="Item" id="ammoGasCan" value="1000" />
+		<reward type="LootItem" id="questMods" value="3" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="15" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="15" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="15" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="15" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="15" />
+
+		<reward type="Quest" id="Second_Base_4" />
+	</quest>
+	<quest id="Second_Base_4">
+	
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Fourth Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a Fourth second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="1000-1300" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="8" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="8" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="8" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="8" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="8" phase="4" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="4" phase="4" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="4" phase="4" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="4" phase="4" />
+		<objective type="ZombieKill" id="zombieScreamer" value="4" phase="4" />
+		<objective type="ZombieKill" id="zombieBurnt" value="4" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="8" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="8" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="8" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="8" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="8" phase="5" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="4" phase="5" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="4" phase="5" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="4" phase="5" />
+		<objective type="ZombieKill" id="zombieScreamer" value="4" phase="5" />
+		<objective type="ZombieKill" id="zombieBurnt" value="4" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="casinoCoin" value="300-1000" />
+		<reward type="Item" id="ammoGasCan" value="1000" />
+		<reward type="LootItem" id="questMods" value="4" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="16" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="16" />
+
+		<reward type="Quest" id="Second_Base_5" />
+	</quest>	
+	<quest id="Second_Base_5">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Fifth Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a fifth second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="1300-1800" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="10" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="10" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="10" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="10" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="10" phase="4" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="5" phase="4" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="5" phase="4" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="5" phase="4" />
+		<objective type="ZombieKill" id="zombieScreamer" value="5" phase="4" />
+		<objective type="ZombieKill" id="zombieBurnt" value="5" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="10" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="10" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="10" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="10" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="10" phase="5" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="5" phase="5" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="5" phase="5" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="5" phase="5" />
+		<objective type="ZombieKill" id="zombieScreamer" value="5" phase="5" />
+		<objective type="ZombieKill" id="zombieBurnt" value="5" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="casinoCoin" value="300-1000" />
+		<reward type="Item" id="ammoGasCan" value="1000" />
+		<reward type="LootItem" id="questMods" value="5" />
+		<reward type="LootItem" id="questConstructionBlocks" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionMaterials" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionExtras" ischosen="true" value="16" />
+		<reward type="LootItem" id="questBaseDefense" ischosen="true" value="16" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="16" />
+
+		<reward type="Quest" id="Second_Base_6" />
+	</quest>
+	<quest id="Second_Base_6">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Sixth Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a sixth second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="1300-1700" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="12" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="12" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="12" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="12" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="12" phase="4" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="6" phase="4" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="6" phase="4" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="6" phase="4" />
+		<objective type="ZombieKill" id="zombieScreamer" value="6" phase="4" />
+		<objective type="ZombieKill" id="zombieBurnt" value="6" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="12" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="12" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="12" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="12" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="12" phase="5" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="6" phase="5" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="6" phase="5" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="6" phase="5" />
+		<objective type="ZombieKill" id="zombieScreamer" value="6" phase="5" />
+		<objective type="ZombieKill" id="zombieBurnt" value="6" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="casinoCoin" value="300-1000" />
+		<reward type="Item" id="ammoGasCan" value="1000" />
+		<reward type="LootItem" id="questMods" value="6" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="16" />
+
+		<reward type="Quest" id="Second_Base_7" />
+
+	</quest>
+	<quest id="Second_Base_7">
+	
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Seventh Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a seventh second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="1700-2000" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="14" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="14" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="14" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="14" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="14" phase="4" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="7" phase="4" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="7" phase="4" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="7" phase="4" />
+		<objective type="ZombieKill" id="zombieScreamer" value="7" phase="4" />
+		<objective type="ZombieKill" id="zombieBurnt" value="7" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="14" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="14" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="14" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="14" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="14" phase="5" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="7" phase="5" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="7" phase="5" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="7" phase="5" />
+		<objective type="ZombieKill" id="zombieScreamer" value="7" phase="5" />
+		<objective type="ZombieKill" id="zombieBurnt" value="7" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="casinoCoin" value="300-1000" />
+		<reward type="Item" id="ammoGasCan" value="1000" />
+		<reward type="LootItem" id="questMods" value="6" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="16" />
+
+		<reward type="Quest" id="Second_Base_8" />
+	</quest>	
+	<quest id="Second_Base_8">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Eighth Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a third second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="2000-2300" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="16" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="16" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="16" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="16" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="16" phase="4" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="8" phase="4" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="8" phase="4" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="8" phase="4" />
+		<objective type="ZombieKill" id="zombieScreamer" value="8" phase="4" />
+		<objective type="ZombieKill" id="zombieBurnt" value="8" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="16" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="16" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="16" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="16" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="16" phase="5" />
+
+		<objective type="ZombieKill" id="zombieSpider" value="8" phase="5" />
+		<objective type="ZombieKill" id="zombieFatHawaiian" value="8" phase="5" />
+		<objective type="ZombieKill" id="zombieWightFeral" value="8" phase="5" />
+		<objective type="ZombieKill" id="zombieScreamer" value="8" phase="5" />
+		<objective type="ZombieKill" id="zombieBurnt" value="8" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="casinoCoin" value="300-1000" />
+		<reward type="Item" id="ammoGasCan" value="1000" />
+		<reward type="LootItem" id="questMods" value="6" />
+		<reward type="LootItem" id="questConstructionBlocks,questConstructionMaterials,questConstructionExtras" ischosen="true" isfixed="true" value="16" />
+		<!--
+		<reward type="Quest" id="Second_Base_4" />
+		-->
+	</quest>
 
 	<quest id="quest_MaterialTrader1_Cobblestone">
 		<property name="name" value="Cobblestone 25" />
@@ -1397,584 +2044,5 @@
 		<reward type="Item" id="pouredConcreteBlock" value="1000" />
 	</quest>		
 
-	<quest id="Second_Base_1">
-		<!-- <property name="group_name" value="Second_Base" /> -->
-		<property name="name" value="Second Base" />
-		<property name="subtitle" value="Go to area marked and start building a base" />
-		<property name="description" value="We need to expand our protected area, get some supplies and then go to the marked area and start to build a second base." />
-		<property name="icon" value="ui_game_symbol_map_fortress" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="easy"/> 
-		<property name="offer" value="Get a second base built at the marked location" />
-		<property name="shareable" value="false" />
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
-		
-		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
-		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
-		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
-		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
-		
-		<objective type="RandomGoto" value="200-500" phase="2">
-			<property name="completion_distance" value="100" />
-		</objective>
-		
-		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
-		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
-		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
-		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
-		
-		<action type="SpawnEnemy" id="zombieSpider" value="2" phase="4" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="2" phase="4" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="2" phase="4" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="2" phase="4" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="2" phase="4" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="1" phase="4" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="1" phase="4" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="1" phase="4" />
-		<objective type="ZombieKill" id="zombieScreamer" value="1" phase="4" />
-		<objective type="ZombieKill" id="zombieBurnt" value="1" phase="4" />
-
-		<action type="SpawnEnemy" id="zombieSpider" value="2" phase="5" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="2" phase="5" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="2" phase="5" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="2" phase="5" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="2" phase="5" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="1" phase="5" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="1" phase="5" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="1" phase="5" />
-		<objective type="ZombieKill" id="zombieScreamer" value="1" phase="5" />
-		<objective type="ZombieKill" id="zombieBurnt" value="1" phase="5" />
-		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6" />
-		</objective>
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6" />
-		</objective>
-	
-		<reward type="Exp" value="3000" />	
-		<reward type="Item" id="casinoCoin" value="300-1000" />
-		<reward type="Item" id="ammoGasCan" value="1000" />
-		<reward type="LootItem" id="questMods" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
-		<reward type="Quest" id="Second_Base_2" />
-	</quest>		
-	<quest id="Second_Base_2">
-		<!-- <property name="group_name" value="Second_Base" /> -->
-		<property name="name" value="The Second Second Base" />
-		<property name="subtitle" value="Go to area marked and start building a base" />
-		<property name="description" value="Wonderful addition, lets keep this up and get more locations ready." />
-		<property name="icon" value="ui_game_symbol_map_fortress" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="easy"/> 
-		<property name="offer" value="Get a second second base built at the marked location" />
-		<property name="shareable" value="false" />
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
-		
-		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
-		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
-		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
-		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
-		
-		<objective type="RandomGoto" value="400-700" phase="2">
-			<property name="completion_distance" value="100" />
-		</objective>
-		
-		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
-		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
-		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
-		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
-		
-		<action type="SpawnEnemy" id="zombieSpider" value="4" phase="4" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="4" phase="4" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="4" phase="4" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="4" phase="4" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="4" phase="4" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="2" phase="4" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="2" phase="4" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="2" phase="4" />
-		<objective type="ZombieKill" id="zombieScreamer" value="2" phase="4" />
-		<objective type="ZombieKill" id="zombieBurnt" value="2" phase="4" />
-
-		<action type="SpawnEnemy" id="zombieSpider" value="4" phase="5" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="4" phase="5" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="4" phase="5" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="4" phase="5" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="4" phase="5" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="2" phase="5" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="2" phase="5" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="2" phase="5" />
-		<objective type="ZombieKill" id="zombieScreamer" value="2" phase="5" />
-		<objective type="ZombieKill" id="zombieBurnt" value="2" phase="5" />
-		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6" />
-		</objective>
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6" />
-		</objective>
-	
-		<reward type="Exp" value="3000" />	
-		<reward type="Item" id="casinoCoin" value="300-1000" />
-		<reward type="Item" id="ammoGasCan" value="1000" />
-		<reward type="LootItem" id="questMods" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
-		<reward type="Quest" id="Second_Base_3" />
-
-	</quest>		
-	<quest id="Second_Base_3">
-		<!-- <property name="group_name" value="Second_Base" /> -->
-		<property name="name" value="The Third Second Base" />
-		<property name="subtitle" value="Go to area marked and start building a base" />
-		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
-		<property name="icon" value="ui_game_symbol_map_fortress" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="easy"/> 
-		<property name="offer" value="Get a third second base built at the marked location" />
-		<property name="shareable" value="false" />
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
-		
-		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
-		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
-		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
-		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
-		
-		<objective type="RandomGoto" value="700-1000" phase="2">
-			<property name="completion_distance" value="100" />
-		</objective>
-		
-		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
-		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
-		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
-		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
-		
-		<action type="SpawnEnemy" id="zombieSpider" value="6" phase="4" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="6" phase="4" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="6" phase="4" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="6" phase="4" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="6" phase="4" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="3" phase="4" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="3" phase="4" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="3" phase="4" />
-		<objective type="ZombieKill" id="zombieScreamer" value="3" phase="4" />
-		<objective type="ZombieKill" id="zombieBurnt" value="3" phase="4" />
-
-		<action type="SpawnEnemy" id="zombieSpider" value="6" phase="5" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="6" phase="5" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="6" phase="5" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="6" phase="5" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="6" phase="5" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="3" phase="5" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="3" phase="5" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="3" phase="5" />
-		<objective type="ZombieKill" id="zombieScreamer" value="3" phase="5" />
-		<objective type="ZombieKill" id="zombieBurnt" value="3" phase="5" />
-		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6" />
-		</objective>
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6" />
-		</objective>
-	
-		<reward type="Exp" value="3000" />	
-		<reward type="Item" id="casinoCoin" value="300-1000" />
-		<reward type="Item" id="ammoGasCan" value="1000" />
-		<reward type="LootItem" id="questMods" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
-
-		<reward type="Quest" id="Second_Base_4" />
-	</quest>
-	<quest id="Second_Base_4">
-	
-		<!-- <property name="group_name" value="Second_Base" /> -->
-		<property name="name" value="The Fourth Second Base" />
-		<property name="subtitle" value="Go to area marked and start building a base" />
-		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
-		<property name="icon" value="ui_game_symbol_map_fortress" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="easy"/> 
-		<property name="offer" value="Get a Fourth second base built at the marked location" />
-		<property name="shareable" value="false" />
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
-		
-		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
-		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
-		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
-		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
-		
-		<objective type="RandomGoto" value="1000-1300" phase="2">
-			<property name="completion_distance" value="100" />
-		</objective>
-		
-		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
-		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
-		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
-		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
-		
-		<action type="SpawnEnemy" id="zombieSpider" value="8" phase="4" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="8" phase="4" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="8" phase="4" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="8" phase="4" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="8" phase="4" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="4" phase="4" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="4" phase="4" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="4" phase="4" />
-		<objective type="ZombieKill" id="zombieScreamer" value="4" phase="4" />
-		<objective type="ZombieKill" id="zombieBurnt" value="4" phase="4" />
-
-		<action type="SpawnEnemy" id="zombieSpider" value="8" phase="5" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="8" phase="5" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="8" phase="5" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="8" phase="5" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="8" phase="5" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="4" phase="5" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="4" phase="5" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="4" phase="5" />
-		<objective type="ZombieKill" id="zombieScreamer" value="4" phase="5" />
-		<objective type="ZombieKill" id="zombieBurnt" value="4" phase="5" />
-		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6" />
-		</objective>
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6" />
-		</objective>
-	
-		<reward type="Exp" value="3000" />	
-		<reward type="Item" id="casinoCoin" value="300-1000" />
-		<reward type="Item" id="ammoGasCan" value="1000" />
-		<reward type="LootItem" id="questMods" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
-
-		<reward type="Quest" id="Second_Base_5" />
-	</quest>	
-	<quest id="Second_Base_5">
-		<!-- <property name="group_name" value="Second_Base" /> -->
-		<property name="name" value="The Fifth Second Base" />
-		<property name="subtitle" value="Go to area marked and start building a base" />
-		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
-		<property name="icon" value="ui_game_symbol_map_fortress" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="easy"/> 
-		<property name="offer" value="Get a fifth second base built at the marked location" />
-		<property name="shareable" value="false" />
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
-		
-		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
-		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
-		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
-		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
-		
-		<objective type="RandomGoto" value="1300-1800" phase="2">
-			<property name="completion_distance" value="100" />
-		</objective>
-		
-		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
-		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
-		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
-		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
-		
-		<action type="SpawnEnemy" id="zombieSpider" value="10" phase="4" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="10" phase="4" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="10" phase="4" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="10" phase="4" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="10" phase="4" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="5" phase="4" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="5" phase="4" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="5" phase="4" />
-		<objective type="ZombieKill" id="zombieScreamer" value="5" phase="4" />
-		<objective type="ZombieKill" id="zombieBurnt" value="5" phase="4" />
-
-		<action type="SpawnEnemy" id="zombieSpider" value="10" phase="5" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="10" phase="5" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="10" phase="5" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="10" phase="5" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="10" phase="5" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="5" phase="5" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="5" phase="5" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="5" phase="5" />
-		<objective type="ZombieKill" id="zombieScreamer" value="5" phase="5" />
-		<objective type="ZombieKill" id="zombieBurnt" value="5" phase="5" />
-		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6" />
-		</objective>
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6" />
-		</objective>
-	
-		<reward type="Exp" value="3000" />	
-		<reward type="Item" id="casinoCoin" value="300-1000" />
-		<reward type="Item" id="ammoGasCan" value="1000" />
-		<reward type="LootItem" id="questMods" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
-
-		<reward type="Quest" id="Second_Base_6" />
-	</quest>
-	<quest id="Second_Base_6">
-		<!-- <property name="group_name" value="Second_Base" /> -->
-		<property name="name" value="The Sixth Second Base" />
-		<property name="subtitle" value="Go to area marked and start building a base" />
-		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
-		<property name="icon" value="ui_game_symbol_map_fortress" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="easy"/> 
-		<property name="offer" value="Get a sixth second base built at the marked location" />
-		<property name="shareable" value="false" />
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
-		
-		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
-		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
-		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
-		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
-		
-		<objective type="RandomGoto" value="1300-1700" phase="2">
-			<property name="completion_distance" value="100" />
-		</objective>
-		
-		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
-		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
-		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
-		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
-		
-		<action type="SpawnEnemy" id="zombieSpider" value="12" phase="4" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="12" phase="4" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="12" phase="4" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="12" phase="4" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="12" phase="4" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="6" phase="4" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="6" phase="4" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="6" phase="4" />
-		<objective type="ZombieKill" id="zombieScreamer" value="6" phase="4" />
-		<objective type="ZombieKill" id="zombieBurnt" value="6" phase="4" />
-
-		<action type="SpawnEnemy" id="zombieSpider" value="12" phase="5" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="12" phase="5" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="12" phase="5" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="12" phase="5" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="12" phase="5" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="6" phase="5" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="6" phase="5" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="6" phase="5" />
-		<objective type="ZombieKill" id="zombieScreamer" value="6" phase="5" />
-		<objective type="ZombieKill" id="zombieBurnt" value="6" phase="5" />
-		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6" />
-		</objective>
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6" />
-		</objective>
-	
-		<reward type="Exp" value="3000" />	
-		<reward type="Item" id="casinoCoin" value="300-1000" />
-		<reward type="Item" id="ammoGasCan" value="1000" />
-		<reward type="LootItem" id="questMods" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
-
-		<reward type="Quest" id="Second_Base_7" />
-
-	</quest>
-	<quest id="Second_Base_7">
-	
-		<!-- <property name="group_name" value="Second_Base" /> -->
-		<property name="name" value="The Seventh Second Base" />
-		<property name="subtitle" value="Go to area marked and start building a base" />
-		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
-		<property name="icon" value="ui_game_symbol_map_fortress" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="easy"/> 
-		<property name="offer" value="Get a seventh second base built at the marked location" />
-		<property name="shareable" value="false" />
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
-		
-		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
-		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
-		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
-		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
-		
-		<objective type="RandomGoto" value="1700-2000" phase="2">
-			<property name="completion_distance" value="100" />
-		</objective>
-		
-		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
-		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
-		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
-		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
-		
-		<action type="SpawnEnemy" id="zombieSpider" value="14" phase="4" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="14" phase="4" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="14" phase="4" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="14" phase="4" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="14" phase="4" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="7" phase="4" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="7" phase="4" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="7" phase="4" />
-		<objective type="ZombieKill" id="zombieScreamer" value="7" phase="4" />
-		<objective type="ZombieKill" id="zombieBurnt" value="7" phase="4" />
-
-		<action type="SpawnEnemy" id="zombieSpider" value="14" phase="5" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="14" phase="5" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="14" phase="5" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="14" phase="5" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="14" phase="5" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="7" phase="5" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="7" phase="5" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="7" phase="5" />
-		<objective type="ZombieKill" id="zombieScreamer" value="7" phase="5" />
-		<objective type="ZombieKill" id="zombieBurnt" value="7" phase="5" />
-		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6" />
-		</objective>
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6" />
-		</objective>
-	
-		<reward type="Exp" value="3000" />	
-		<reward type="Item" id="casinoCoin" value="300-1000" />
-		<reward type="Item" id="ammoGasCan" value="1000" />
-		<reward type="LootItem" id="questMods" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
-
-		<reward type="Quest" id="Second_Base_8" />
-	</quest>	
-	<quest id="Second_Base_8">
-		<!-- <property name="group_name" value="Second_Base" /> -->
-		<property name="name" value="The Eighth Second Base" />
-		<property name="subtitle" value="Go to area marked and start building a base" />
-		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
-		<property name="icon" value="ui_game_symbol_map_fortress" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="easy"/> 
-		<property name="offer" value="Get a third second base built at the marked location" />
-		<property name="shareable" value="false" />
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
-		
-		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
-		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
-		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
-		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
-		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
-		
-		<objective type="RandomGoto" value="2000-2300" phase="2">
-			<property name="completion_distance" value="100" />
-		</objective>
-		
-		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
-		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
-		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
-		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="1" />
-		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
-		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
-		
-		<action type="SpawnEnemy" id="zombieSpider" value="16" phase="4" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="16" phase="4" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="16" phase="4" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="16" phase="4" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="16" phase="4" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="8" phase="4" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="8" phase="4" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="8" phase="4" />
-		<objective type="ZombieKill" id="zombieScreamer" value="8" phase="4" />
-		<objective type="ZombieKill" id="zombieBurnt" value="8" phase="4" />
-
-		<action type="SpawnEnemy" id="zombieSpider" value="16" phase="5" />
-		<action type="SpawnEnemy" id="zombieFatHawaiian" value="16" phase="5" />
-		<action type="SpawnEnemy" id="zombieWightFeral" value="16" phase="5" />
-		<action type="SpawnEnemy" id="zombieScreamer" value="16" phase="5" />
-		<action type="SpawnEnemy" id="zombieBurnt" value="16" phase="5" />
-
-		<objective type="ZombieKill" id="zombieSpider" value="8" phase="5" />
-		<objective type="ZombieKill" id="zombieFatHawaiian" value="8" phase="5" />
-		<objective type="ZombieKill" id="zombieWightFeral" value="8" phase="5" />
-		<objective type="ZombieKill" id="zombieScreamer" value="8" phase="5" />
-		<objective type="ZombieKill" id="zombieBurnt" value="8" phase="5" />
-		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6" />
-		</objective>
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6" />
-		</objective>
-	
-		<reward type="Exp" value="3000" />	
-		<reward type="Item" id="casinoCoin" value="300-1000" />
-		<reward type="Item" id="ammoGasCan" value="1000" />
-		<reward type="LootItem" id="questMods" value="1" />
-		<reward type="LootItem" id="questTools" value="1" />
-		<!--
-		<reward type="Quest" id="Second_Base_4" />
-		-->
-	</quest>
 </append>
 </Drs_BaseConstructor>

@@ -6,21 +6,17 @@
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~Iron Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~Steel Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~Wood Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<!-- Vanilla Wood Bars changes -->
 	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@name='Texture']/@value">379</set>
 	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">scrapIronBarsCentered</set>
 	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@class='UpgradeBlock']/property[@name='Item']/@value">resourceScrapIron</set>
 	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">40</set>
 	<set xpath="/blocks/block[@name='woodBars']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">scrapIronBars</set>
-
 <append xpath="/blocks">
-
 	<!-- WoodDowelBars -->	
 	<block name="WoodDowelBarsCentered">
 			<property name="Extends" value="ironBarsCentered"/>
@@ -51,7 +47,6 @@
 				<property name="UpgradeHitCount" value="6"/>
 			</property>			
 	</block>
-
 	<!-- WoodDowelBars01 -->			
 	<block name="WoodDowelBarsCentered01">
 			<property name="Extends" value="ironBarsCentered"/>
@@ -85,8 +80,6 @@
 			</property>
 			<property name="DowngradeBlock" value="WoodDowelBars"/>
 	</block>
-
-
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~Iron Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<!-- Scrap Iron Bars -->
@@ -235,11 +228,8 @@
 			</property>
 			<property name="DowngradeBlock" value="WroughtIronBars"/>
 	</block>
-
-
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~Steel Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
 	<!-- Steel Bars	-->
 	<block name="steelBarsCentered">
 			<property name="CustomIcon" value="ironBars"/>
@@ -352,12 +342,10 @@
 	<property name="DowngradeBlock" value="woodBars"/>
 </append>
 -->
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~Stainless Block~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
 <append xpath="/blocks/block[@name='steelBlock']">
 		<property class="UpgradeBlock">
 			<property name="ToBlock" value="stainlessSteelBlock"/>
@@ -365,9 +353,8 @@
 			<property name="ItemCount" value="15"/>
 			<property name="UpgradeHitCount" value="4"/>
 		</property>
-		<property name="DowngradeBlock" value="woodBarsCentered"/>
 </append>
-
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~Barbwire Upgrade~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- <remove xpath="blocks/block/[@name='barbedWireSheet']"/> -->
@@ -380,7 +367,6 @@
 		</property>	
 </append>
 <append xpath="/blocks">
-
 	<block name="barbedWireSheet01">
 		<property name="Class" value="Damage"/>
 		<property name="Damage" value="1"/>
@@ -407,7 +393,12 @@
 		<property name="SortOrder1" value="70g0"/>
 	</block>
 </append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~crushedCars~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/blocks/block[@name='crushedCars']">
+		<property name="AllowAllRotations" value="true"/>
+		<property class="RepairItems"> <property name="resourceScrapIron" value="50"/> </property>
+</append>
 
-
-	
 </Drs_BaseConstructor_BarsAndBlocks>
